@@ -1,0 +1,37 @@
+////////////////////////////////////////////////////////////////////////////////
+1. Configurar tu identidad en Git (requerido para hacer commits)
+Ejecuta estos comandos con tu información (usando el mismo email asociado a tu cuenta de GitHub):
+
+git config --global user.email "tu_email@ejemplo.com"
+git config --global user.name "Tu Nombre"
+
+----------------------------------------------------------------------------------------
+
+2. Eliminar el remote origin existente y volver a agregarlo
+
+git remote remove origin
+git remote add origin https://github.com/n1kko-source/portfolio_n1kko.git
+
+-----------------------------------------------------------------------------------------
+
+3. Verificar y preparar tus archivos para el commit
+
+git status  # Ver qué archivos están listos para commit
+git add .   # Agregar todos los archivos nuevos/modificados
+git commit -m "Initial commit"  # Crear el primer commit
+
+-----------------------------------------------------------------------------------------
+
+4. Renombrar la rama principal a main (si es necesario)
+
+git branch -M main
+
+git push -u origin main
+
+-----------------------------------------------------------------------------------------
+
+Verificación final:
+
+git log --oneline  # Deberías ver tu commit
+git branch         # Deberías estar en 'main'
+git remote -v      # Deberías ver tu repositorio remoto

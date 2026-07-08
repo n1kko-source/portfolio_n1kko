@@ -1,81 +1,79 @@
-import { motion } from 'framer-motion';
-import viewImg from '../assets/view.jpeg';
-import { ABOUT_TEXT } from '../constants';
-
-const container = (delay) => ({
-  hidden: { x: -100, opacity: 0 },
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: { duration: 0.6, delay: delay },
-  },
-});
+import { motion } from "framer-motion";
+import { ABOUT_QUOTE, ABOUT_TEXT, SOMBRERO_3D_CREDIT } from "../constants";
+import { bloom, impactPop, sectionHeading } from "../lib/motion";
+import SombreroVueltiao3D from "./SombreroVueltiao3D";
 
 export const About = () => {
   return (
-    <div className='border-b border-neutral-900 pb-4'>
-      {/* Title Section */}
+    <section id="about" className="section-border relative pb-20 pt-8">
       <motion.h2
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.8 }}
-        className='my-20 text-center text-4xl'
+        variants={sectionHeading}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-80px" }}
+        className="section-heading my-12 text-center"
       >
-        About <span className='text-amber-600'>Me</span>
+        About <span className="section-heading-accent">Me</span>
       </motion.h2>
 
-      {/* Content Section */}
-      <div className='flex flex-wrap'>
-        {/* Image Column */}
+      <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
         <motion.div
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.5 }}
-          className='w-full lg:w-1/2 lg:p-8'
+          variants={impactPop}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-60px" }}
+          className="mb-6 w-full"
         >
-          <div className='flex items-center justify-center'>
-            <img 
-              className='rounded-2xl mb-4 w-2/3 lg:w-3/4' 
-              src={viewImg} 
-              alt='about' 
-            />
-          </div>
-        </motion.div>
-
-        {/* Text Column */}
-        <motion.div
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: 100 }}
-          transition={{ duration: 0.5 }}
-          className='w-full lg:w-1/2'
-        >
-          {/* About Text */}
-          <div className='flex justify-center lg:justify-start'>
-            <p className='my-3 max-w-xl py-6  text-justify'>
-              {ABOUT_TEXT}
-            </p>
-          </div>
-
-          {/* Visualize Text - Centered and Larger */}
-          <div className='w-full  mt-6 mb-6'>
-            <motion.span
-              variants={container(0.5)}
-              initial='hidden'
-              animate='visible'
-              className='bg-gradient-to-r from-amber-400 via-orange-500 to-pink-500 
-              bg-clip-text text-4xl lg:text-3xl tracking-tight text-transparent'
+          <SombreroVueltiao3D />
+          <p className="mt-3 text-xs tracking-widest text-tierra-400 uppercase">
+            Caña flecha · Colombia
+          </p>
+          <p className="mt-2 text-xs leading-relaxed text-tierra-400">
+            3D model{" "}
+            <a
+              href={SOMBRERO_3D_CREDIT.modelUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-orquidea-600 underline decoration-orquidea-300 underline-offset-2 hover:text-orquidea-500"
             >
-              Visualize
-            </motion.span>
-                      <div className='flex justify-center lg:justify-start'>
-            <p className='my-3 max-w-xl py-6  text-justify'>
-              "No permitas que tu memoria se enajene de las cosas que tienes, sino de las que te hagan falta."
-            </p>
-          </div>
-          </div>
+              {SOMBRERO_3D_CREDIT.title}
+            </a>{" "}
+            by{" "}
+            <a
+              href={SOMBRERO_3D_CREDIT.authorUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-orquidea-600 underline decoration-orquidea-300 underline-offset-2 hover:text-orquidea-500"
+            >
+              {SOMBRERO_3D_CREDIT.author}
+            </a>{" "}
+            · {SOMBRERO_3D_CREDIT.license}
+          </p>
         </motion.div>
+
+        <motion.p
+          variants={bloom}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-60px" }}
+          className="max-w-xl leading-relaxed text-tierra-500"
+        >
+          {ABOUT_TEXT}
+        </motion.p>
+
+        <motion.blockquote
+          variants={bloom}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-60px" }}
+          className="mt-8 max-w-md border-t border-tierra-300/40 pt-6"
+        >
+          <p className="text-sm italic leading-relaxed text-tierra-400">
+            {ABOUT_QUOTE}
+          </p>
+        </motion.blockquote>
       </div>
-    </div>
+    </section>
   );
 };
 

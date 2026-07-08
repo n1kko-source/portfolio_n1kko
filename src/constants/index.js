@@ -1,75 +1,171 @@
-import project1 from "../assets/projects/project-1.png";
-import project2 from "../assets/projects/project-2.png";
-import project3 from "../assets/projects/project-3.png";
+import posImage from "../assets/sistema_pos.png";
+import bookifyImage from "../assets/bookify.png";
+import userviceImage from "../assets/uservice.png";
+import hospitalImage from "../assets/hospital-bg.jpg";
 
+export const HERO_CONTENT = `Student from Tunja, Colombia. I've shipped a restaurant POS for a real client, built full-stack web apps, and contributed to a hospital IT monitoring system. Still learning — and building along the way.`;
 
-export const HERO_CONTENT = `I'm a passionate frontend developer and data analyst with a knack for creating beautiful and functional user interfaces. I have a strong 
-foundation in HTML, CSS, JavaScript, Python and I'm always eager to learn new technologies and improve my skills. My goal is to improve the enviroment and the targets of ML (Machine Learning)
- and the new system of the web (WEB 3.0) .`;
+export const ABOUT_TEXT = `I'm a systems engineering student at Universidad Santo Tomás in Tunja, Boyacá. Over the past couple of years I've moved from architecture studies into software — and the projects in this portfolio are what I've actually built: a desktop POS for a local restaurant, full-stack scheduling apps, a corporate website, a mobile movie app, and a collaborative hospital monitoring dashboard.
 
-export const ABOUT_TEXT = `I’m a curious and innovative developer with a passion for understanding how things work—whether it’s the human brain, machine learning algorithms, or the psychology 
-behind great design. Over the past 2 years, I’ve combined my love for technology and aesthetics to build efficient, visually engaging web applications that leave a lasting impression. 
-My expertise spans React, Node.js, Java Swing, XML, and database systems like MySQL, PostgreSQL, and PHP MyAdmin. I enjoy experimenting with 3D visuals, interactive interfaces, and bold color schemes to create unique user experiences.
- Beyond web development, I leverage Python for data analysis and Tableau for visualization, turning raw data into compelling stories.`;
+I work mostly with React, TypeScript, Node.js, Python, and PostgreSQL — always tied to something real I've shipped or contributed to. I'm still in formation, but I care about writing code that solves actual problems for real people.`;
 
-export const EXPERIENCES = [
+export const ABOUT_QUOTE = `"No permitas que tu memoria se enajene de las cosas que tienes, sino de las que te hagan falta."`;
+
+export const EDUCATION = [
   {
-    year: "2022 - 2023",
+    year: "2022 – 2023",
     role: "Architecture Student",
-    company: "Santo Tomas Tunja",
-    description: `Having studied architecture was really an impulse to know in which area to dedicate my time and energy, it was important, because knowing how function and design converge has always been crucial in my life.`,
-    technologies: ["Design Skills"],
+    institution: "Universidad Santo Tomás — Tunja",
+    description:
+      "Studying architecture helped me understand how form and function come together — something I now apply when thinking about interfaces and user flows in software.",
+    technologies: ["Design thinking"],
   },
   {
-    year: "2023 - Actually",
-    role: "System Engineer",
-    company: "Santo Tomas Tunja",
-    description: `The attitude has been fundamental to develop different roles as a current student of this beautiful institution, the institutional values it represents have had an impact on my thinking, continually prioritizing teamwork, conflict resolution, respect as the main pass and learning by teaching.`,
-    technologies: ["HTML", "CSS", "Javascript", "React.js", "Node.js", "PostgreSQL", "MySQL"],
+    year: "2023 – Present",
+    role: "Systems Engineering Student",
+    institution: "Universidad Santo Tomás — Tunja",
+    description:
+      "Where I've built most of what's in this portfolio: the Voting System, Bookify, the hospital IT monitoring project, the UService website, and the restaurant POS for Hogareño's in Boyacá.",
+    technologies: ["React", "TypeScript", "Node.js", "Python", "PostgreSQL"],
   },
+];
+
+export const CERTIFICATIONS = [
   {
-    year: "2024 - Actually",
-    role: "Developer - Data Analyst",
-    company: "Platzi",
-    description: `Platzi has been a platform that has helped me to deepen my studies, being able to see new paths to where ytechnology is going and its purpose, other platforms such as Youtube, Linkedin and GitHub have been of great help.`,
-    technologies: ["Python", "Tableau", "MachineLearning (ML)", "Three.js" ],
-  },
-  {
-    year: "Actually - Future",
-    role: "YOU",
-    company: "YOU",
-    description: `For me, for you, for the company, for the future.`,
-    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
+    year: "2024 – Present",
+    title: "Online Courses & Certifications",
+    platform: "Platzi",
+    description:
+      "Complementary learning in Python, data visualization, and modern web technologies. Not employment — ongoing self-directed study.",
+    technologies: ["Python", "Data visualization"],
   },
 ];
 
 export const PROJECTS = [
   {
-    title: "Environmental Manager",
-    image: project1,
+    title: "POS Hogareño's",
     description:
-      "A fully functional Environmental Manager software with features like users manage, certified manage, and user authentication.",
-    technologies: ["VsCode", "JavaFx", "Fxml", "MySQL Worckbench", "Xampp"],
-  },
-  {
-    title: "Music App",
-    image: project2,
-    description:
-      "Music platform similar to spotify, with user management, subscriptions, songs, artists, genres and a main menu for music playback.",
-    technologies: ["ApacheNetBeans", "MySQL Worckbench", "xampp", "Java Swing"],
+      "Offline point-of-sale and billing system built for Hogareño's restaurant in Siachoque, Boyacá. Handles table management, orders, atomic invoice numbering, bill splitting, thermal printing (ESC/POS), inventory control, and PDF/Excel reports. Role-based access for cashier, supervisor, and admin.",
+    technologies: ["Python", "CustomTkinter", "SQLite", "ESC/POS", "ReportLab", "openpyxl"],
+    githubUrl: "https://github.com/n1kko-source/restaurante_pos",
+    liveUrl: null,
+    featured: true,
+    category: "desktop",
+    image: posImage,
+    placeholder: {
+      gradient: "from-selva-400 to-selva-600",
+      label: "Desktop · Offline POS",
+    },
   },
   {
     title: "Voting System",
-    image: project3,
     description:
-      "A Voting System that allows users to create and participate in polls, with features like real-time results and user authentication.",
-    technologies: ["React", "Node.js", "Bootstrap", "PgAdmin", "Express.js"],
+      "Full-stack web app for creating and participating in polls, with user authentication and real-time results. Built as a university project — my main piece of evidence for web development.",
+    technologies: ["React", "Node.js", "Express", "PostgreSQL", "Bootstrap"],
+    githubUrl: "https://github.com/n1kko-source/voting-system",
+    liveUrl: null,
+    featured: true,
+    category: "web",
+    placeholder: {
+      gradient: "from-cielo-500 to-cielo-600",
+      label: "Web · Full Stack",
+    },
   },
+  {
+    title: "Bookify",
+    description:
+      "Full-stack appointment scheduling system for businesses with multiple locations, services, specialists, and spaces. Complete booking flow with authentication and role-based access.",
+    technologies: ["React", "TypeScript", "NestJS", "MySQL", "Tailwind CSS"],
+    githubUrl: "https://github.com/n1kko-source/bookify",
+    liveUrl: null,
+    featured: false,
+    category: "web",
+    image: bookifyImage,
+    placeholder: {
+      gradient: "from-cielo-400 to-selva-400",
+      label: "Web · Scheduling",
+    },
+  },
+  {
+    title: "Mobile Movie App",
+    description:
+      "Mobile app for browsing and discovering movies, built with React Native and Expo. Uses Appwrite as backend and NativeWind for styling.",
+    technologies: ["React Native", "Expo", "TypeScript", "Appwrite", "NativeWind"],
+    githubUrl: "https://github.com/n1kko-source/mobile_movie_app",
+    liveUrl: null,
+    featured: false,
+    category: "mobile",
+    placeholder: {
+      gradient: "from-orquidea-400 to-orquidea-600",
+      label: "Mobile · React Native",
+    },
+  },
+  {
+    title: "UService Website",
+    description:
+      "Designed and developed the corporate website for UService — focused on digital presence and client outreach. A project I built, not a consultancy track record.",
+    technologies: ["React", "TanStack Start", "TanStack Router", "Tailwind CSS", "Radix UI"],
+    githubUrl: "https://github.com/n1kko-source/uservice-sas",
+    liveUrl: "https://www.userviceglobal.com",
+    featured: false,
+    category: "web",
+    image: userviceImage,
+    placeholder: {
+      gradient: "from-sol-500 to-orquidea-400",
+      label: "Web · Corporate Site",
+    },
+  },
+  {
+    title: "Hospital IT Monitoring",
+    description:
+      "Collaborative university project for Hospital Universitario San Rafael de Tunja. IT infrastructure monitoring dashboard for servers, networks, databases, and connected medical equipment.",
+    technologies: ["React", "TypeScript", "TanStack Query", "Tailwind CSS"],
+    githubUrl: "https://github.com/EliuBarrera/Sistema_de_Monitoreo_Hospitalario_TI",
+    liveUrl: null,
+    featured: false,
+    category: "collaborative",
+    image: hospitalImage,
+    imagePosition: "object-[center_35%]",
+    placeholder: {
+      gradient: "from-sol-400 to-cielo-500",
+      label: "Collaborative · University",
+    },
+  },
+];
 
+export const TOOLS_FROM_PROJECTS = [
+  { name: "React" },
+  { name: "TypeScript" },
+  { name: "Node.js" },
+  { name: "NestJS" },
+  { name: "Python" },
+  { name: "PostgreSQL" },
+  { name: "MySQL" },
+  { name: "SQLite" },
+  { name: "Tailwind CSS" },
+  { name: "Bootstrap" },
+  { name: "React Native" },
+  { name: "Expo" },
 ];
 
 export const CONTACT = {
-  address: "Av Universitaria #42A-60, Tunja, Colombia ",
-  phoneNu: "+57 3206448690 ",
-  email: "us.nicolas.munoz@gmail.com",
+  address: "Av Universitaria #42A-60, Tunja, Boyacá, Colombia",
+  phoneNu: "+57 320 644 8690",
+  email: "juannicolasmunoz868@gmail.com",
 };
+
+export const SOMBRERO_3D_CREDIT = {
+  title: "Sombrero Vueltiao Colombia",
+  author: "Juan David",
+  authorUrl: "https://sketchfab.com/JuanDavid.497",
+  modelUrl:
+    "https://sketchfab.com/3d-models/sombrero-vueltiao-colombia-626560a80beb4edc992b001f8b54e714",
+  license: "CC Attribution",
+};
+
+export const NAV_LINKS = [
+  { label: "About", href: "#about" },
+  { label: "Projects", href: "#projects" },
+  { label: "Experience", href: "#experience" },
+  { label: "Contact", href: "#contact" },
+];

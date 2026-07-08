@@ -1,9 +1,96 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root{
-    font-family: "Inter", sans-serif;
+:root {
+  font-family: "Inter", sans-serif;
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-papel-100 text-tierra-600 antialiased;
+}
+
+@layer components {
+  .nav-link {
+    @apply text-tierra-600 transition-all duration-300 hover:scale-110 hover:text-orquidea-600;
+  }
+
+  .nav-composition {
+    @apply bg-transparent;
+  }
+
+  .nav-composition-inner {
+    @apply bg-transparent;
+  }
+
+  .nav-link-instagram {
+    @apply flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] shadow-md shadow-orquidea-500/25 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-orquidea-500/40;
+  }
+
+  .sombrero-canvas canvas {
+    touch-action: pan-y;
+  }
+
+  .section-heading {
+    @apply font-display text-4xl font-semibold tracking-tight text-tierra-700 md:text-5xl;
+  }
+
+  .section-heading-accent {
+    @apply bg-gradient-to-r from-orquidea-500 via-sol-500 to-cielo-600 bg-clip-text text-transparent;
+  }
+
+  .tech-chip {
+    @apply mr-2 mt-2 inline-block rounded-full border border-tierra-300/40 bg-papel-200/80 px-3 py-1 text-sm font-medium text-tierra-600;
+  }
+
+  .gradient-border {
+    position: relative;
+    border-radius: 1.5rem;
+    padding: 3px;
+    background: conic-gradient(
+      from 0deg,
+      theme('colors.sol.400'),
+      theme('colors.orquidea.400'),
+      theme('colors.cielo.400'),
+      theme('colors.montana.400'),
+      theme('colors.sol.400')
+    );
+    animation: spin-warm 8s linear infinite;
+  }
+
+  .gradient-border-inner {
+    @apply overflow-hidden rounded-[1.35rem] bg-papel-50;
+  }
+
+  .glass-card {
+    @apply rounded-2xl border border-tierra-300/25 bg-papel-50/80 shadow-sm shadow-tierra-400/10 backdrop-blur-sm;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-full border border-tierra-400/50 bg-papel-100 px-4 py-2 text-sm font-medium text-tierra-700 transition-all duration-300 hover:border-orquidea-400 hover:bg-orquidea-500/10 hover:text-orquidea-600;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 rounded-full border border-cielo-500/40 bg-cielo-200/30 px-4 py-2 text-sm font-medium text-cielo-600 transition-all duration-300 hover:border-cielo-500 hover:bg-cielo-200/50 hover:text-cielo-600;
+  }
+
+  .wave-divider {
+    @apply relative h-16 w-full overflow-hidden;
+  }
+
+  .section-border {
+    @apply border-b border-tierra-300/30;
+  }
+}
+
+::selection {
+  @apply bg-sol-300 text-tierra-700;
 }

@@ -1,6 +1,7 @@
 import posImage from "../assets/sistema_pos.png";
 import bookifyImage from "../assets/bookify.png";
 import userviceImage from "../assets/uservice.png";
+import movieAppImage from "../assets/movie_app.png";
 import hospitalImage from "../assets/hospital-bg.jpg";
 
 export const HERO_CONTENT = `Student from Tunja, Colombia. I've shipped a restaurant POS for a real client, built full-stack web apps, and contributed to a hospital IT monitoring system. Still learning — and building along the way.`;
@@ -25,7 +26,7 @@ export const EDUCATION = [
     role: "Systems Engineering Student",
     institution: "Universidad Santo Tomás — Tunja",
     description:
-      "Where I've built most of what's in this portfolio: the Voting System, Bookify, the hospital IT monitoring project, the UService website, and the restaurant POS for Hogareño's in Boyacá.",
+      "Where I've built most of what's in this portfolio: Bookify, the hospital IT monitoring project, the UService website, and the restaurant POS for Hogareño's in Boyacá.",
     technologies: ["React", "TypeScript", "Node.js", "Python", "PostgreSQL"],
   },
 ];
@@ -58,20 +59,6 @@ export const PROJECTS = [
     },
   },
   {
-    title: "Voting System",
-    description:
-      "Full-stack web app for creating and participating in polls, with user authentication and real-time results. Built as a university project — my main piece of evidence for web development.",
-    technologies: ["React", "Node.js", "Express", "PostgreSQL", "Bootstrap"],
-    githubUrl: "https://github.com/n1kko-source/voting-system",
-    liveUrl: null,
-    featured: true,
-    category: "web",
-    placeholder: {
-      gradient: "from-cielo-500 to-cielo-600",
-      label: "Web · Full Stack",
-    },
-  },
-  {
     title: "Bookify",
     description:
       "Full-stack appointment scheduling system for businesses with multiple locations, services, specialists, and spaces. Complete booking flow with authentication and role-based access.",
@@ -95,6 +82,7 @@ export const PROJECTS = [
     liveUrl: null,
     featured: false,
     category: "mobile",
+    image: movieAppImage,
     placeholder: {
       gradient: "from-orquidea-400 to-orquidea-600",
       label: "Mobile · React Native",

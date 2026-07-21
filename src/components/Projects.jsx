@@ -21,7 +21,7 @@ export const Projects = () => {
       </motion.h2>
 
       <p className="mx-auto mb-12 max-w-2xl text-center text-tierra-500">
-        Everything here links to a real repository. No filler — just software I've actually built or contributed to.
+        Everything here links to a real repository. No filler, just software I've actually built or contributed to.
       </p>
 
       <motion.div

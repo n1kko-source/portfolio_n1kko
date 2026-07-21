@@ -17,7 +17,7 @@ export const Technologies = () => {
       </motion.h2>
 
       <p className="mx-auto mb-10 max-w-xl text-center text-sm text-tierra-500">
-        Only technologies that appear in the repositories linked above — nothing aspirational.
+        Only technologies that appear in the repositories linked above, nothing aspirational.
       </p>
 
       <motion.div

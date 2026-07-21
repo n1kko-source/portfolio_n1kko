@@ -4,27 +4,27 @@ import userviceImage from "../assets/uservice.png";
 import movieAppImage from "../assets/movie_app.png";
 import hospitalImage from "../assets/hospital-bg.jpg";
 
-export const HERO_CONTENT = `Student from Tunja, Colombia. I've shipped a restaurant POS for a real client, built full-stack web apps, and contributed to a hospital IT monitoring system. Still learning — and building along the way.`;
+export const HERO_CONTENT = `Student from Tunja, Colombia. I've shipped a restaurant POS for a real client, built full-stack web apps, and contributed to a hospital IT monitoring system. Still learning, and building along the way.`;
 
-export const ABOUT_TEXT = `I'm a systems engineering student at Universidad Santo Tomás in Tunja, Boyacá. Over the past couple of years I've moved from architecture studies into software — and the projects in this portfolio are what I've actually built: a desktop POS for a local restaurant, full-stack scheduling apps, a corporate website, a mobile movie app, and a collaborative hospital monitoring dashboard.
+export const ABOUT_TEXT = `I'm a systems engineering student at Universidad Santo Tomás in Tunja, Boyacá. Over the past couple of years I've moved from architecture studies into software, and the projects in this portfolio are what I've actually built: a desktop POS for a local restaurant, full-stack scheduling apps, a corporate website, a mobile movie app, and a collaborative hospital monitoring dashboard.
 
-I work mostly with React, TypeScript, Node.js, Python, and PostgreSQL — always tied to something real I've shipped or contributed to. I'm still in formation, but I care about writing code that solves actual problems for real people.`;
+I work mostly with React, TypeScript, Node.js, Python, and PostgreSQL, always tied to something real I've shipped or contributed to. I'm still in formation, but I care about writing code that solves actual problems for real people.`;
 
 export const ABOUT_QUOTE = `"No permitas que tu memoria se enajene de las cosas que tienes, sino de las que te hagan falta."`;
 
 export const EDUCATION = [
   {
-    year: "2022 – 2023",
+    year: "2022-2023",
     role: "Architecture Student",
-    institution: "Universidad Santo Tomás — Tunja",
+    institution: "Universidad Santo Tomás, Tunja",
     description:
-      "Studying architecture helped me understand how form and function come together — something I now apply when thinking about interfaces and user flows in software.",
+      "Studying architecture helped me understand how form and function come together, something I now apply when thinking about interfaces and user flows in software.",
     technologies: ["Design thinking"],
   },
   {
-    year: "2023 – Present",
+    year: "2023-Present",
     role: "Systems Engineering Student",
-    institution: "Universidad Santo Tomás — Tunja",
+    institution: "Universidad Santo Tomás, Tunja",
     description:
       "Where I've built most of what's in this portfolio: Bookify, the hospital IT monitoring project, the UService website, and the restaurant POS for Hogareño's in Boyacá.",
     technologies: ["React", "TypeScript", "Node.js", "Python", "PostgreSQL"],
@@ -33,11 +33,11 @@ export const EDUCATION = [
 
 export const CERTIFICATIONS = [
   {
-    year: "2024 – Present",
+    year: "2024-Present",
     title: "Online Courses & Certifications",
     platform: "Platzi",
     description:
-      "Complementary learning in Python, data visualization, and modern web technologies. Not employment — ongoing self-directed study.",
+      "Complementary learning in Python, data visualization, and modern web technologies. Not employment, ongoing self-directed study.",
     technologies: ["Python", "Data visualization"],
   },
 ];
@@ -91,7 +91,7 @@ export const PROJECTS = [
   {
     title: "UService Website",
     description:
-      "Designed and developed the corporate website for UService — focused on digital presence and client outreach. A project I built, not a consultancy track record.",
+      "Designed and developed the corporate website for UService, focused on digital presence and client outreach. A project I built, not a consultancy track record.",
     technologies: ["React", "TanStack Start", "TanStack Router", "Tailwind CSS", "Radix UI"],
     githubUrl: "https://github.com/n1kko-source/uservice-sas",
     liveUrl: "https://www.userviceglobal.com",
@@ -152,8 +152,8 @@ export const SOMBRERO_3D_CREDIT = {
 };
 
 export const NAV_LINKS = [
-  { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Experience", href: "#experience" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/about" },
+  { label: "Projects", href: "/projects" },
+  { label: "Experience", href: "/experience" },
+  { label: "Contact", href: "/contact" },
 ];

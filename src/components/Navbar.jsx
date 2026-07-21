@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { NAV_LINKS } from "../constants";
@@ -19,22 +20,22 @@ export const Navbar = () => {
           <VueltiaoDiamond className="absolute -left-1 top-1/2 h-8 w-8 -translate-y-1/2 opacity-50 md:-left-3 md:h-10 md:w-10" />
           <VueltiaoDiamond className="absolute -right-1 top-1/2 h-8 w-8 -translate-y-1/2 opacity-50 md:-right-3 md:h-10 md:w-10" />
 
-          <a
-            href="#hero"
+          <Link
+            to="/"
             className="font-display relative z-10 bg-gradient-to-r from-tierra-600 via-orquidea-500 to-cielo-600 bg-clip-text text-2xl font-bold tracking-wide text-transparent md:text-3xl"
           >
             N1kko
-          </a>
+          </Link>
 
           <div className="relative z-10 hidden items-center gap-5 md:flex">
             {NAV_LINKS.map((link) => (
-              <a
+              <Link
                 key={link.href}
-                href={link.href}
+                to={link.href}
                 className="text-sm font-medium text-tierra-600 transition-all duration-300 hover:scale-105 hover:text-orquidea-600"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
 
